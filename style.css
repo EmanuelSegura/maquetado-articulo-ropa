@@ -1,0 +1,325 @@
+/* Montserrat Font & Noto Sans Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Noto+Sans&display=swap');
+
+/* Remover espacios por defecto de las columnas de Bootstrap y algunos ajustes por defecto que me interesa aplicar*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-6 {
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.25rem;
+    margin: 0;
+}
+
+p,
+button {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/* ARTICULO */
+
+
+/* Flex Dad - general */
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+
+/* PRIMERA PARTE DE LA TARJETA */
+
+
+/* /*  *** IMAGENES ***  */
+
+
+/* Flex dad - Articulo de la remera */
+
+.cards-flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+/* Flex child Articulo de la remera*/
+
+.card-flex {
+    height: 100%;
+}
+
+
+/* Flex dad - Imagenes de el articulo */
+
+.article-imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+
+/* Imagen principal de el articulo */
+
+.article-img {
+    /* Maximo ancho de la remera en el espacio de pantalla asignado */
+    max-width: 100%;
+    margin: 1.4rem;
+}
+
+
+/* Imagenes circulares - grupo */
+
+.mini-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.7rem 2.813rem;
+}
+
+
+/* Item - imagen circular */
+
+.mini-img {
+    width: 3.75rem;
+    margin: 0 0.25rem;
+}
+
+
+/* SEGUNDA PARTE DE LA TARJETA */
+
+
+/*  *** CUERPO DE EL ARTICULO ***  */
+
+.body-article {
+    margin: 2rem 1.5rem 0 1.5rem;
+    color: #666666;
+    text-align: left;
+    font-weight: 400;
+}
+
+
+/* Titulo de el articulo */
+
+.title {
+    font-weight: 300;
+    margin-bottom: 0.938rem;
+}
+
+
+/* Descripcion de el articulo */
+
+.description {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Parrafo con el texto 'color' */
+
+.color-article {
+    margin-top: 1.75rem;
+}
+
+
+/* circulos de colores de prenda */
+
+.color-circle {
+    margin: 0.10rem 0.15rem 0.10rem 0;
+}
+
+
+/* Circulo activo  */
+
+.color-circle-active {
+    margin: 0rem -0.30rem 0.30rem -0.35rem;
+}
+
+
+/* *** TALLES *** */
+
+.sizes {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Circulos de talles  */
+
+.size {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0.25rem 0 0;
+}
+
+
+/* Talle elegido */
+
+.size-active {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 -0.25rem;
+}
+
+
+/*  *** PRECIOS ***  */
+
+.prices-article {
+    display: flex;
+    font-size: 2.25rem;
+    letter-spacing: -1.8px;
+}
+
+
+/* Precio y ex precio */
+
+.price,
+.ex-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin: 1.875rem 0.625rem 0 0;
+}
+
+.ex-price {
+    text-decoration: line-through;
+    color: #CCCCCC;
+}
+
+
+/*  *** BOTONES ***  */
+
+
+/* Botones de el articulo */
+
+.buttons-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.button-add-cart,
+.button-add-wishlist {
+    font-size: 0.875rem;
+    font-weight: 400;
+    border-radius: 6px;
+    padding: 0.75rem 2rem;
+}
+
+.button-add-cart {
+    color: #FFFFFF;
+    background-color: #88C9F6;
+    border: none;
+    margin-right: 1.25rem;
+}
+
+.button-add-cart:hover {
+    color: #FFFFFF;
+    background-color: #88C9F6;
+}
+
+
+/* efecto en el cursor de boton deshabilitado */
+
+.button-add-cart:disabled {
+    cursor: not-allowed;
+}
+
+.button-add-wishlist {
+    color: #5A90BC;
+    border: 2px solid #5A90BC;
+}
+
+.button-add-wishlist:hover {
+    color: #FFFFFF;
+    background-color: #5A90BC;
+    border: 2px solid #5A90BC;
+}
+
+
+/*  *** DESKTOP ***  */
+
+@media screen and (min-width: 1170px) {
+    /* Flex Dad - general */
+    .main {
+        height: 100vh;
+        margin: 0;
+    }
+    /* Flex dad Articulo de la remera  */
+    .cards-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 73.125rem;
+        height: 48.125rem;
+        /* Sombra para el articulo con compatibilidad en todos los browsers */
+        -webkit-box-shadow: 0px 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+        /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow: 0px 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+        /* Firefox 3.5 - 3.6 */
+        box-shadow: 0px 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+        /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    }
+    .cards-flex:hover {
+        box-shadow: 0px 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+        transition: all 0.1s linear;
+    }
+    /* Flex dad Imagenes de el articulo */
+    .article-imgs {
+        height: 100%;
+    }
+    /* Imagen principal de el articulo */
+    .article-img {
+        /* 442px */
+        height: 27.625rem;
+        width: 27.625rem;
+        margin: 5.625rem 0 0 0;
+        cursor: pointer;
+    }
+    /* Imagenes circulares - grupo */
+    .mini-imgs {
+        margin: 5.625rem;
+    }
+    /* Item - imagen circular */
+    .mini-img {
+        cursor: pointer;
+    }
+    /* PARTE IZQUIERDA DE LA TARJETA */
+    .body-article {
+        margin: 5rem 0 0 6.25rem;
+    }
+    .title {
+        font-weight: 300;
+        margin-bottom: 1.875rem;
+    }
+    .description {
+        margin-bottom: 1rem;
+    }
+    /* circulos de colores de prenda */
+    .color-circle {
+        cursor: pointer;
+    }
+    /* Circulos de talles  */
+    .size {
+        cursor: pointer;
+    }
+    /* Botones de el articulo */
+    .buttons-article {
+        justify-content: unset;
+        align-items: unset;
+        margin: 3.125rem 0 0 0;
+    }
+}
